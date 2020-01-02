@@ -4,10 +4,10 @@ My notes on coding
 ## The Basic Mindset
 ![Try not!Do or do not,There is no try!](file_readme/try-not.jpg "Try not!Do or Do not, There is no try!")
 * You can do it, it is a lot , but not exactly hard.
-* Coding is a aquired skill, it is not mental activity but physical exersise.
+* Coding is a aquired skill, in the begining it is not a mental activity but a physical exersise.
 * Don't give up, you don't have that option.
-* Protect your wrist , protect your hand, stay away from the mouse.
-
+* Be patien, don't try to learn about everything you encounter.
+* Protect your wrist , Protect your hand, Stay away from the mouse.
 
 
 ## The Basic Stratery
