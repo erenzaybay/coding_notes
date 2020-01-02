@@ -2,7 +2,7 @@
 My notes on coding
 
 ## The Basic Mindset
-![Try not!Do or do not,There is no try!](https://anshuchristajacobson.files.wordpress.com/2011/11/try-not.jpg "Try not!Do or Do not, There is no try!")
+![Try not!Do or do not,There is no try!](files_readme/try-not.jpg "Try not!Do or Do not, There is no try!")
 * You can do it, it is a lot , but not exactly hard.
 * Coding is a aquired skill, it is not mental activity but physical exersise.
 * Don't give up, you don't have that option.
