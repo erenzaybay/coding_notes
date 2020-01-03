@@ -38,10 +38,17 @@ started 2019.01.01
 
 
 
-unknown Concepts collected:
+### Yet to learn Concepts collected:
 
-Vim
-zen coding
-LaTax
+Vim: a text editor with so called steep learning curve
+zen coding: a package in text editor allows fast html css formating
+LaTax: a book editing tool???
 
-known and learn:
+Jekyll: a static website generating tool
+
+Docker:???
+
+Wordpress:a website  framework?? content manager???
+
+known and learnt:
+
