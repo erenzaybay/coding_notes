@@ -1,0 +1,91 @@
+# entering the postgre database
+qsql -U postgres postgres    # the first postgres is the username ,the second is the database
+
+# list all the database
+\l
+
+# exit the terminal app
+\q
+
+# for all the query , you need to add ; to the end, it is a must
+
+# the table content use in this note,  from the people_table2
+--------------------------------------------------------
+id | first_name | last_name | age |      ocupation
+----+------------+-----------+-----+---------------------
+  1 | Eren       | Bay       |  32 | construction worker
+  2 | Adina      | Bay       |  27 | Musician
+  3 | Zay        | Kan       |  18 | Mathematician
+  4 | Bay        | Ka        |  22 |  Singer
+
+# create a databse
+create database people_db;
+
+#create a table
+create table people_table (
+	id integer,
+	name varchar(255)	
+);
+# another table, you can put it in a single line, but it is more clear this way, convention
+create table people_table2 (
+	id integer,
+	first_name varchar(255), 
+	last_name varchar(255),
+	age integer,
+	ocupation varchar(255)
+);
+
+#delete a table
+drop table people_table
+
+#insert a row , the position of value and columm name should match  , it must be single quote '
+insert into people_table values (1,'Eren');                             # 1 is ID, name is 'Eren'
+insert into people_table values (2, 'Adina');                           # 2 is ID, name is 'Adina'
+insert into people_table (id,name) values( 3, 'Zay');                   #  the position should match
+insert into people_table (name,id) values('Bay',4);
+#insert into another table
+insert into people_table2 values( 2,'Adina','Bay',27,'Musician');
+
+
+# select all the content from the table
+select * from people_table;
+
+# select certain column from the table
+select first_name,last_name form people_table2;
+
+# select certain data meet the criteria
+select * from people_table2 wherelast_name ='Bay';
+select first_name from people_table2 where last_name ='Bay';
+select first_name from people_table2 where last_name ='Bay' or last_name='Kan'
+select first_name from people_table2 where (last_name ='Bay' or last_name ='Kan') And age <20;
+select first_name from people_table2 where (last_name ='Bay' or last_name ='Kan') And age <20 order by age;        # from small to big
+select first_name from people_table2 where (last_name ='Bay' or last_name ='Kan') And age <20 order by age desc;   # desc mean descend, reverse the order
+
+# how you actually write the query  , ; means the query is over
+select first_name from people_table2 
+where (last_name ='Bay' or last_name ='Kan')
+And age <20 
+order by age,last_name desc;
+
+# copy the content of a table into another table
+select *                              # you can also select first_name,last_name
+into newtable [in externaldb]         # last part is the database name
+from oldtable
+where condition;                      # write the condition you want
+
+# update the content
+update people_table2
+set age=20                            #it change all the name to 20 when condition is met
+where first_name="Eren"               #if the where part is added, all the record would change
+and last_name="Bay"
+
+#delete the content of the table ,table remains , the content is gone
+delete from people_table2
+
+#delete part of the record
+delete from people_table2
+where condition
+
+
+
+

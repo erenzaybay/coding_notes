@@ -1,0 +1,5 @@
+# free online coding practices
+https://exercism.io
+
+#best sqlite online course, you can practice on it
+http://www.sqlitetutorial.net/

@@ -1,0 +1,83 @@
+
+	1. Install Virtual Box
+	2. 
+Install ubuntu linux16
+	3. 
+Updating the system
+
+
+	1. 
+enter Terminal
+	2. 
+sudo apt-get update
+	3. 
+sudo apt-get upgrade   
+
+
+	* 
+Installing Guestaddions and enable shared folder   Youtube
+
+
+	1. 
+Device--add guestaddition
+	2. 
+sudo apt-get install module-assistant
+	3. 
+sudo m-a prepare 
+	4. 
+cd /media/yourusername       
+	5. 
+ls 
+	6. 
+cd /folderpath 
+	7. 
+sudo sh VBoxLinuxAdditions.run
+	8. 
+sudo adduser ubuntu vboxsf
+	9. 
+sudo reboot
+
+
+	* 
+Installing Chrome
+
+
+	1. 
+cd downloadfolder
+
+		1. 
+wget wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+	2. 
+sudo dpkg -i google-chrome*; sudo apt-get -f install 
+
+
+	* 
+Install Chinese Code
+
+
+	1. 
+System setting--Language Support- Install
+	2. 
+sudo apt install fcitx sudo apt install fcitx fcitx-googlepinyin fcitx-table-wbpy fcitx-pinyin fcitx-sunpinyinfffffffffffffffffffffffffcitx-googlepinyin fcitx-table-wbpy fcitx-pinyin fcitx-sunpinyin
+	3. 
+install Synaptic Package Manager from Ubuntu Software
+	4. 
+Install google pinyin
+	5. 
+Change the input method in language support
+	6. 
+figure out the rest by yourself
+
+
+	* 
+Installing Lantern
+
+
+	1. 
+Download lantern from github
+	2. 
+goto the download location 
+	3. 
+sudo dpkg -i lantern*; sudo apt-get -f install 
+	4. 
+upgrade the lantern to pro version

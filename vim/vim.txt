@@ -1,0 +1,391 @@
+
+
+# Knowledge:
+
+
+Vim is a fancy text editor with superpower.
+
+These notes are based on Venture into vim course provided by tutsplus
+
+.vimrc  It is a vim configuration file that saves your vim preference.
+.vimrc file in windows is located in the user directory C:\Users\erenzaybay\.vimrc
+.vimrc file in linux is located in the user folder ~\.vimrc
+	
+There are three mode:
+    i    insert mode
+    v    visual mode, there is a variation called visual line mode , enter it by pressing vl
+    Esc  normal mode, also called command mode
+
+Enter visual mode or visual line mode to do cool yanking.
+
+numbers can be used as repeater.
+
+Buffer is a place in memory, it is shown as a list of files , you need to save the file to goto the next buffer.
+
+When opening tabs and windows, the tabs are one level higher in structural logic. Basically windows are nested in tabs.
+
+git had a detailed log file records all the input actions
+
+There is graphic vim you can use if you prefer, but it beats the purpose of using vim
+
+using help file can be usefull:  :help :s   This shows the help file for the command :s
+
+.swp files are the temporarily save files that exists only when there is an abnornal exit, you can retrive unsaved file from the file, and you need to manually remove the file when they are not usefull any more.
+
+notation used in this note(the same is used in vim official doc file):
+
+dap   in sequence , press d , then a then p
+
+<C-n> hold down Ctrl and then n at the same time
+
+G<C-n> press and release G, then press Ctrl and n at the same time
+™
+{motion}{a-zA-z}{char}{int}{repeater}{registername}  these are the place holder
+
+<Esc>  Escape key
+<CR>  Carriage return key or enter key
+<Ctrl>   Ctrl key
+<Tab> tab key
+<Shift> shift key
+<S-Tab> press the shift and tab key at the same time
+<space> space bar
+Using space as indication of mode change: cw replacement <Esc>
+
+
+
+
+
+
+
+
+# .vimrc:
+
+:set number show line numbers of the file, it could be added to the .vimrc file
+
+:se ft=python      This set the file type to python highlight
+
+:set expandtab     this sets indentation to a certain number of spaces
+
+:set noexpandtab   this set indentation to tab
+
+:set shiftwidth=4   this set four space for on indentation when you are using spaces as indentation.
+
+:set smartindent   (not recomented,why) it puts cursor at the right position when you press enter at any time,for example ,when you are in a function
+
+:set softtabstop=4 (When you are using tab in insert mode, this would make tab =4 spaces, find out how to reverse the effect)	
+
+
+:set foldmethod=syntax  :set fdm=syntax    they are the same Automatic folding according to the syntax
+
+
+:set fdm=maker         using marker method  Using markers to fold:
+:set foldmaker={{{,}}}
+
+
+
+
+
+Basic editing:
+
+
+Ctrl +d it means down, It jumps half a screen down
+Ctrl +u it means up, It jumps half a screen up
+Ctrl +f it means full, It jumps full screen down
+Ctrl + b it means backwards, It jumps full screenup
+
+M move cursor to the middle of the current screen
+H move cursor to the head of the current screen
+L move cursor to the last line of the current screen
+
+3L     3 lines above the bottom
+3H     3 lines below the head
+
+zt this command will modify the current window so that the current cursor position will stay on top of the screen
+zb this command will modify the current window so that the current cursor position will stay on the bottom of the screen
+zz  this command will modify the current window so that the current cursor position will stay in the middle of the screen
+
+
+
+
+Indentation and folds
+
+>>     it is one indentation
+
+<<  it is one indentation back
+
+3>> indent current line and next 2 lines from the current line
+
+You can enter visual mode to selected part you wish to indent
+
+In visual mode, you can jump to the other side of the visual selection by pressing o
+
+You can you Ctrl-T and Ctrl-D to indent and indent back,but it is not supported in cmder
+
+gv reselect the part you selected in visual mode
+
+
+
+Basic movement: 
+j	move cursor up a character  
+k	move cursor down a character
+h	move cursor left a character
+l	move cursor right a character
+
+w move forward one word, cursor at the first letter
+b move afterward one word, cursor at the first letter
+e move forward one word, cursor at the last letter
+B move forward on real word, ignoring the punctuation marks, it is <shift-b>
+
+$ move to the end of the line
+0 move to the beginning of the line, the real beginning
+^ move to the beginning of the line, the first none-space letter
+
+gg move to the beginning of the file
+G   move to the end of the file,it is <shift-g>
+{  move to the last paragraph
+} move to the next paragraph
+
+x delete the letter at the current cursor
+u undo your last action
+<ctrl-u> cancel the last undo
+. repeat the last action
+
+o start a new line below and into the insert mode
+O start a new line above and into the insert mode
+p paste
+P paste before the cursor , which is extremly useful,it is <shift+p>
+
+f  it means find word begin with target letter fa find the first word begin with a within the current line, it only searches forward
+F same with f, but works backwards
+t it also looks for word begin with target letter, but it puts cursor before the word
+T same with t, but works backwards
+
+/    this search for word          
+/function <Enter> search for word "function"
+
+n  go to next search result
+N go to last search result
+:nohl  it means no hight light , it remove the highlighted search result
+
+so you have to goto the top of the file if you hope to search the full file
+
+? backward search 
+?function <Enter>   search for word "function"
+
+d  delete  when you delete stuff , they are also copied
+dw delete the word at the cursor 
+db delete the word before the cursor
+
+d/target <Enter>  delete until the word "target"
+c/target <Enter>  change until the word "target"
+y/target <Enter>  change until the word "target"
+
+cw change the current word, delete the word at the current cursor and into the insert mode
+cb change the last word, delete the word before the cursor and into the insert mode
+dd delete the current line
+cc change the current line
+yy copy the current line , y stands for yank, means copy
+yw yank word
+y0 yank everything before the cursor
+
+
+
+
+
+11G goto line 11
+
+3gg and 3G all goto the third line form the top of the file
+:14             go to line 14
+
+
+
+2fw 2b 2e 2j 2k   repeater actions
+2dw 2db
+5dd 7cc
+
+/\n\n  this search for black line
+Basic commanline:
+:set list         This would list the invisable characters (tavs   newline )  ^I is tab  $ is newline
+
+:set nolist       hid the effect of set list
+
+
+Advanced editing topics:
+Advanced content change:
+
+ct"   change until "                      
+"this is a test"         
+
+ci"  change inside the "
+"this is a test"
+
+ca" change around " This would include both of the "
+"this is a test"
+
+REPLACEMENT:
+s stand for substitute 
+% stand for the whole file
+/g g stands for global
+
+:s/Ember/Amber   replace Ember to Amber in current line
+:%s/Ember/Amber replace Ember to Amber in the whole file , but it only replace the first occurrence of the word Ember
+:%s/Ember/Amber/g replace Ember to Amber in the whole file ,every single one of them
+You do not have to go to the top of the file to make it work
+
+
+
+
+
+Recording Macro and calling Register
+
+Press q and the register name character and record the content of the macro and press q to finish recording.
+To call the register, press @ and then press the register name charactor
+Recording Macro:    q{registername}{actions}q
+Calling register: @{registername}
+for example:
+qaithis is the content of the macro(Esc)q      /recording macro (use 
+@a                                    /calling the register
+@@                                   /execute the last macro
+:reg    checking the register , show all the register and their according actions
+
+
+Using Marker:
+Press m and the register name to record the position of the line       m{regisername}
+To call the marker, press ' and the name of the marker             ‘{registername}
+
+
+Using command line from the Vim without leaving the Vim
+:!      anything following this will be executed as command line command
+for example :!ls             /list the content of the directory
+
+
+
+folding methods:
+
+
+
+Manual fold:
+
+zf5j   Fold the current line and the next 5 lines, 6 lines in total
+
+zo open current folding where the cursor is
+
+zO open everything
+
+zc close current folding where the cursor is
+
+zC close everything
+
+zd delete fold
+
+folding the current bracket:
+
+1.place the cursor at the bracket
+2.press zf%              % means current
+
+zi enable or unenable folds, show folds or not show folds.
+
+Automatic folding according to the syntax
+
+:set foldmethod=syntax        :set fdm=syntax    they are the same
+
+Using markers to fold:
+
+:set fdm=maker         using marker method
+
+:set foldmaker={{{,}}}
+
+
+
+
+
+
+File structure,tab and windows:
+
+Buffer:
+:ls list all the file in the buffer , %a current buffer, # last visited buffer
+:ls list all the file in the buffer , %a current buffer, # last visited buffer
+:bn  go to the next buffer
+:bp  go to the previous buffer
+:b# go to the last buffer we visited 
+:e filename  this loads a file into the buffer
+:bd delete the current buffer
+:bd 12   delete the buffer 12	
+
+
+Tablets:
+
+:tabe pathofthefile  It means tabedit  ,it opens a new tab
+ 
+You can use split within the tab
+
+gt      move one tab forward
+gT     move one tab backward
+
+
+
+
+Windows:
+
+:vs pathofthefile (vsplite)       load a new file into the buffer and open a new window for it from the left    this is vertical split
+
+Ctrl-w + L  go to the left window   using HJIK
+
+Ctrl-w + H go to the right window
+
+:sp pathofthefile   this split the window horizontally (scrren up and down)
+
+Ctrl-w +  bigger by one vertically
+
+Ctrl-w -  smaller by one vertically
+
+Ctrl-w > bigger by one horizontally
+
+Ctrl-w 10< smaller by one horizontally
+
+Ctrl-w 10+   Ctrl-w 10-        Ctrl-w 10>     Ctrl-w 10<
+
+Ctrl-w e        This equally distribute the window sizes
+
+:sb14         open buffer 14 horrizontally
+
+:vert sb14     open buffer 14 vertically
+
+
+
+
+
+
+
+
+
+Practical Tips base on known knowledge
+
+Replaceing all the target keyword within a bracket:
+If you want to change all the occurrences in a bracket, do the following:
+1.move the cursor to one of the bracket.
+2.press v to enter the visual mode.
+3.press % to make vim select all the content with in the bracket.
+4.enter :s/Ember/Amber/gc             (g is global fag, c is confirm flag, it make you able to confirm all the change)
+5.note:In reality , it would not show as :s/Ember/Amber/gc but rather '<,'>:s/Ember/Amber/gc
+
+
+:r !curl --silent url       /This is very useful, it fetch the code from line directly to you file
+
+:read !ls     /read the content of the directory into the current file
+
+
+checking the spelling:
+:set spell spelllang=en_us      /It check the spelling in english US,
+=z                              / move the curser to the misspelled word, and use this to look for the right word. and press enter.
+:set nospell                    / disableing the spell checker.
+
+
+Less useful tips:
+
+If you want to make all the indentation within the file corrent, you can select all the content of the file and press =, this would auto indent all the indentation correctly, for example in C,but maybe not in python. 
+Or go to the top of the file and press =G . it would auto indent the whole file.
+
+=3g correct the indents for the next 3 lines
+
+

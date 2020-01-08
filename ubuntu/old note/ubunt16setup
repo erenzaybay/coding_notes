@@ -1,0 +1,72 @@
+other haven't istalled possible usefull software:
+
+shadow socket for freedom:
+udo add-apt-repository ppa:hzwhuang/ss-qt5 
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+
+Actaully installed apps:
+
+Install ubuntu
+
+update the 'software and updates'
+
+update the 'ubuntu updater'
+
+update the language setting
+
+sudo apt-get update
+
+sudo apt-get upgrade 
+
+install lantern
+
+install chrome
+
+install Rime Chinese input 
+sudo apt install ibus-rime
+sudo apt install librime-date-pinyin-simp
+
+install git
+
+install vim 
+
+install unity tweak tool
+
+install wangyi cloud music
+
+install Kingsoft wps
+
+install shutter the screen capture app
+sudo apt-get install shutter
+
+install video player
+sudo apt-get instal vlc
+install third-party-code
+sudo apt install ubuntu-restricted-extras
+
+add monitor to system panel
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor 
+sudo apt-get update  
+sudo apt-get install indicator-sysmonitor  
+
+install gimp
+
+install tlp for linux bettery saving by limiting the cpu heating
+sudo apt install tlp tlp-rdw
+sudo tlp start
+
+setup git 
+
+ssh-keygen  #create keypair
+ssh-agent -s  #start the ssh-agent
+ssh-add /home/eren/.ssh/id_rsa  #add the key
+goto github setting to add the id_rsa.pub content
+ssh -T git@github.com  #link the github and your system
+
+install evernote software
+currently installed whatever but it might not work in Chinese yinxiangbiji
+
+install spotify via ubuntu software
+
+install vitual studio codes 

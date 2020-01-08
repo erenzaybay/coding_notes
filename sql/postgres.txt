@@ -1,0 +1,26 @@
+
+Database: Tables, rows, columns
+
+DBMS: Database management system
+
+SQL: Structured query language
+
+Table: single class of data
+
+Rows(Records) ,Columns(fields) and Cell: Structure of a table
+
+CRUD: Creat ,Read, Update, and Delete
+
+I learn the SQL by using Postgresql
+
+Installing Postgresql on windows 10
+  1.using installer to install
+  2.don't choose stack builder
+  3. Start pgadmin4 and type in the password ,click remenber the password 	
+  4. put the bin and lib directory into system path
+
+Use the menue "Tools --- Query Tool"   to use sql query 
+
+To view the table content, right click table ,Data ---View all Rows
+
+

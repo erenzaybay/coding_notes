@@ -1,0 +1,25 @@
+Common command lines
+
+#remove a directory in currnt position with warning
+rm -r yourdirectory
+
+#remove a directory in current position without warning
+rm -rf yourdirectory
+
+#looking for manuel for certain command
+man git
+
+#list the folder and files in current folder
+ls
+
+#enter a certain folder
+cd foldername
+
+#enter your user folder
+cd ~
+
+#up a folder
+cd ..
+
+#to check whether an app is installed or not
+apt-cache policy theappyouwanttocheck

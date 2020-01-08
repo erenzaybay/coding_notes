@@ -1,0 +1,21 @@
+Virtual Macine & Ubuntu
+
+1.install it, give it a fixed space.
+2."Device" menue has install guest addition. Do it.
+3.Add shared folder, remenber to select "auto mount". Then start the Ubuntu,type in ""
+
+
+sudo mount -t vboxsf myfoldernameonthewindws /home/eren/thepathofmytargetfolderonubuntu
+
+
+
+
+Why is VirtualBox only showing 32 bit guest versions on my 64 bit host OS?
+
+The Bottom Line
+
+If VirtualBox is only showing 32 bit versions in the Version list make sure:
+
+Your Host OS is 64-bits
+Intel Virtualization Technology and VT-d are both enabled in the BIOS
+The Hyper-V platform is disabled in your Windows Feature list.
