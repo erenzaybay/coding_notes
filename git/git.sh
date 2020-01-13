@@ -1,6 +1,9 @@
 ########################### Baisc Commands ###########################
 
 
+
+
+
 1.initializing git :
 # You go into a directory to type this to iniialize an repository either with files or an empty one
 git init    
@@ -365,6 +368,11 @@ git init
 git remote add origin git@github.com:erenzaybay/gittest.git
 # pull the change from the github
 git pull origin master
+
+
+Testing if github could be successfully connected
+# testing the ssh authentication
+ssh -T git@github.com
 
 
 ########################### THEORY AND KNOWLEDGE ###########################
