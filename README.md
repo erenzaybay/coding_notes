@@ -50,6 +50,8 @@ Docker:???
 
 Wordpress:a website  framework?? content manager???
 
+front-end frameworks: Backbone, Angular, React and Ember.
+
 Angular.js is one of the most widely used single-page application development frameworks in the industry. It makes it easier than ever to create efficient and production-ready single-page applications.
 
 known and learnt:
