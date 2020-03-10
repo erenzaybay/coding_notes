@@ -1,6 +1,8 @@
-# use # to comment a line
 
-# use ''' or """ to comment an entire section,it is not recommended
+# use to comment a line
+
+# use following way  to comment an entire section,it is not recommended
+
 
 '''
 I think
@@ -8,7 +10,8 @@ this
 is 
 an 
 great
-idea'''
+idea
+'''
 
 # To declare an encoding other than the default one,
 # a special comment line should be added as the first line of the file. 
@@ -56,3 +59,6 @@ idea'''
 # so is became manageble
 
 #try use more if __name__=="__main__":main() in non trivial code
+
+
+
