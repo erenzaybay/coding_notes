@@ -1,5 +1,11 @@
-
-#
+# Knowledge
+# python
+# vim
+# Markdown
+# pip
+# rgx
+# SQLite
+# flask
 
 '''
 pass

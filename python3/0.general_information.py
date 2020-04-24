@@ -1,3 +1,15 @@
+
+
+# Knowledge
+# python
+# vim
+# Markdown
+# pip
+# rgx
+# SQLite
+# flask
+
+
 # good books to be read
 pep 8
 hickhikers way to python

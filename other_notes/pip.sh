@@ -2,6 +2,10 @@
 
 
 1. basic actions
+
+#show the list of help file 
+pip help
+
 #finding help documentation for "install"
 pip help install
 
