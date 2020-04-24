@@ -34,27 +34,16 @@ target.insert(5, "inserted element,other's move back")
 listb.count("how many of this element")
 listb.index("index of the first occurrance")
 
-
 outlast=["pop out the last element"].pop()
 outfirst=target4.pop(0)
 outindex=target4.pop(3)
 
-
-
-
-
-# using list as a stack, first one in first one out
-
-target3=[1, 2, 3, 4]
-# it push out the last element of target3, and assign it to a
+target3=["list", "as", "a", "stack", "first",
+    "one", "in", "first", "one", "out"]
 a=target3.pop()
-print("list as stack", target3, f"a={a}")
 
-# using list as a deque, first one in last one out
 
-from collections import deque                # import deque module
-target3=[1, 2, 3, 4]
-queue=deque(target3)                        # create deque object
-# it push out the first element of queue,and assign it to a
+from collections import deque
+target3=["list", "as", "deque", "fist", "one", "in", "last", "one", "out"]
+queue=deque(target3)
 a=queue.popleft()
-print("list as deque", queue, f"a={a}")
