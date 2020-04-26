@@ -1,10 +1,10 @@
-# function take in primeter and return result or perform functions
+# function take in parameter and return result or perform functions
 def function_with_default_values(a=2, b=3, c=4, d=5):
     result = a+b+c
     print(result)
     return result
 
-# It can take in a function as a primeter
+# It can take in a function as a parameter
 
 
 def function_mother(function, x):
@@ -20,31 +20,40 @@ print(function_mother(function_child, 5))  # result is 25
 # Function can takin a function as values
 function_a = function_b
 
-
-# function with tuple as the argumet
-# the tuple can not be changed,it is imutables
+# using key word argument and unpacking tuple,list, and string
 
 
-def function_with_tuple_simple(*args):
-    for name in args:
-        print(f"{name} is winner!")
+def function_unpacking(one_element, *keyword):
+    print(one_element, end=" ")
+    for i in keyword:
+        print(i, end="|")
+    print("\n")
 
 
-function_with_tuple_simple("Jane", "Jack", "Jude", "Jasimin")
+list_input = [1, 2, 3, 4, 5, 6, 7]
+tuple_input = (1, 2, 3, 4, 5, 6, 7)
+string_input = "1234567"
+function_unpacking("list input", *list_input)
+function_unpacking("tuple input", *tuple_input)
+function_unpacking("string input", *string_input)
+function_unpacking("direct input", 1, 2, 3, 4, 5, 6, 7)
 
-winer_list = ["Jane", "Jack", "Jude", "Jasimin"]
+# using key word argument and unpacking dictionary
+def function_for_dictionary(**kwargs):
+    for key in kwargs:
+        print(key, kwargs[key])
 
-# You can not directly use a list, it will see the list as an one element
-function_with_tuple_simple(winer_list)  # check the result
 
-# You need to use * to note that you want it to be splited
-function_with_tuple_simple(*winer_list)  # check and compare the result
+dictionary_input = {"a": 1, "b": 2, "c": 3}
+function_for_dictionary(**dictionary_input)
+function_for_dictionary(name="Eren", Age="33", gender="male")
+
 
 
 # function with key word argumets as the argumet
 # It is like a dictionary
 # it is convention to name it **kwargs
-def function_with_key_word_argument_simple(**kwargs):
+def function_for_dictionary(**kwargs):
     for key in kwargs:
         print(key, kwargs[key])
 
