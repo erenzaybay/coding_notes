@@ -63,3 +63,43 @@ idea
 # try use more if __name__=="__main__":main() in non trivial code
 
 PI = 3.14  # using Uppercase to indicate the constant, python don't really have constant
+
+
+#-----------------------------------------------------------------------------------------------------------------
+# python , in python there are two types of scopes,
+# local variables with function scope and the global variable with file scope.
+# In python there no block level scope.
+# odd cases: python create a new local variable in function
+# if you call global variable with in a function with the same value as the global variable.
+# in order to actually call a global variable within a function,
+# you need to declear it explicitly. difference between the following two functions:
+# using global variable within a function is bad practice.
+# you can access global variable within the function, but don't do it.
+
+bad_greeting_1 = "a"
+
+
+def greeting_1():
+    bad_greeting_1 = "b"
+    print(bad_greeting_1, "this shows b")
+
+
+greeting_1()
+print(bad_greeting_1, "This show a")
+
+
+# there is global variable within the function , and its value is changed.
+bad_greeting_2 = "a"
+
+
+def greeting2():
+    # this is how you access global variable within a function ,DON'T DO IT!
+    global bad_greeting_2
+    bad_greeting_2 = "b"
+    print(bad_greeting_2, "this shows b")
+
+
+greeting2()
+print(bad_greeting_2, "this shows b")
+
+#-----------------------------------------------------------------------------------------------------------------

@@ -34,3 +34,17 @@ if __name__ == "__main__":
     main()
 
 PI = 3.14  # using Uppercase to indicate the constant, python don't really have constant
+
+
+bad_greeting_2 = "a"
+
+
+def greeting2():
+    # this is how you access global variable within a function ,DON'T DO IT!
+    global bad_greeting_2
+    bad_greeting_2 = "b"
+    print(bad_greeting_2, "this shows b")
+
+
+greeting2()
+print(bad_greeting_2, "this shows b")

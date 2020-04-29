@@ -17,3 +17,4 @@
 # pep 8
 # hickhikers way to python
 # real python
+# https://book.pythontips.com/en/latest/index.html
