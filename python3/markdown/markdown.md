@@ -1,57 +1,33 @@
 <!--This is a comment-->
 
-
 <!--Basic Editing-->
 
 # Heading with horizontal rule beneath
-## Heading with horizontal rule beneath
-### Heading
-#### Heading
-##### Heading
-###### Heading
 
-This is how you write *Italic*.
+## Heading 2
 
-writing _Italic_ again.
+### Heading 3
 
-This is how you write **bold**.
+#### Heading 4
 
-writing __bold__ again
+##### Heading 5
 
-~~cross out the line~~
+###### Heading 6
 
-~~**I am crazy!**~~
+Write *Italic* and _Italic_.
 
-**~~I am crazy!~~**
+Write **bold** and __bold__.
+
+~~cross out the line~~ 
+
+~~**corss out the bold line**~~
+
+**~~cros out the bold line~~**
 
 the usage of "\\"
 
-<!--quotation-->
-
-># this is the bigest header, a line would appare underneath.
->## this is the hearder for blockquote
->### this is smaller header
->#### this is another line 
->##### this is another header
-
->This is a quotation from a famous guy
->and this is another line of the saying
-
-<!--This is an example-->
-># The Great Roman History
->##  Men shoudl work hard!
->a long time ago
-
-<!--horrizontal rules-->
-
-when there is a string above one or more dash "\-", the string is big and bold ,there is a thin line
--
-
-when there is no string above one dash "\-" ,it is a dot
-
--
-
-When there is no string above ,three  "\-\-\-"  is a bold line
+># quotation
+>quotation
 
 ---
 
@@ -60,9 +36,6 @@ When there is no string above ,three  "\-\-\-"  is a bold line
 [the name of the link](https://www.google.com "hover information")
 
 [the name of the link](https://www.google.com)
-
-
-
 
 <!--Unordered list, you can only nest once-->
 
@@ -89,11 +62,6 @@ When there is no string above ,three  "\-\-\-"  is a bold line
        1. hello
        1. derro
        1. buddo
-
-
-
-
-
 
 
 <!--inline code block-->
