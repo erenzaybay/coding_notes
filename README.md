@@ -3,7 +3,7 @@ My notes on coding
 started 2019.01.01
 
 ## The Basic Mindset
-![Try not!Do or do not,There is no try!](file_readme/try-not.jpg "Try not!Do or Do not, There is no try!")
+* Don't Give Up!
 * Commit everyday, even if it is trivial commit.
 * You can do it, it is a lot , but not exactly hard.
 * Coding is a aquired skill, in the begining it is not a mental activity but a physical exersise.

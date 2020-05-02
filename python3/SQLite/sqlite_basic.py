@@ -50,6 +50,29 @@ cursor.fetchmany(3)
 # if no rows available, return an empty list
 cursor.fetchall()
 
+# f string is dangerous, don't do it
+# risk of sql injection attach
+cursor.execute("INSERT INTO employees VALUES('{}',{})".format(name, pay))
+
+# another way, safer, but not better
+cursor.execute("INSERT INTO employees VALUES(?,?)", (name, pay))
+
+# the best way ,using a dictionary ,clear and readable
+cursor.execute("INSERT INTO employees VALUES(:name,:pay),{"name":name,"pay",pay}")
+cursor.execute("commit")
+
+# not the best way, notice the comma, to indicate it's tuple
+cursor.execute("SELECT * FROM employees WHERE income = ?", (name,))
+cursor.execute("commit")
+
+# the best way
+cursor.execute("SELECT * FROM employees WHERE income = :name", {"name": name})
+cursor.execute("commit")
+
+# update
+cursor.execute("UPDATE employees SET pay =:pay WHERE name=:name AND pay = :pay ", {'name': name, 'pay'=pay})
+
+
 
 # close the connect object when you are done with the database in the end
 connect_object.close()

@@ -5,13 +5,13 @@
 # F5 run debuging
 # F10 steping over the current point to the next line of executable code in debuging
 # F11 go into the currently called function.
-#  press end key to move the cursor to the end of the line
-#  press home key to move the cursor to the beging of the line
-#  ctrl+home ctrl+end for begining of the file or end of the file
-#  alt+up alt+down for moving up or down after you select or current line
-#  shift+alt+up/down for duplicating the code selected.
-#  ctrl+/ for commenting out the selected section ,you can toggle between them
-#  you can autocomplete by pressing any letter in function
+# press end key to move the cursor to the end of the line
+# press home key to move the cursor to the beging of the line
+# ctrl+home ctrl+end for begining of the file or end of the file
+# alt+up alt+down for moving up or down after you select or current line
+# shift+alt+up/down for duplicating the code selected.
+# ctrl+/ for commenting out the selected section ,you can toggle between them
+# you can autocomplete by pressing any letter in function
 # ctrl+F2 change all occurrence
 
 # Extensions shortcuts
