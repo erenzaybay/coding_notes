@@ -23,3 +23,8 @@ cd ..
 
 #to check whether an app is installed or not
 apt-cache policy theappyouwanttocheck
+
+
+view filename
+
+to view a file in read only mode 
