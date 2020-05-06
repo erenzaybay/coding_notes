@@ -1,6 +1,6 @@
- 
+ Basic editing:
 
-Basic editing:
+
 
 
 to view a file in read only mode 
