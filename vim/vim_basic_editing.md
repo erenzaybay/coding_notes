@@ -1,8 +1,6 @@
  Basic editing:
 
 
-
-
 to view a file in read only mode 
 
 view filename
