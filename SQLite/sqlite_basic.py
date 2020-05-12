@@ -72,7 +72,5 @@ cursor.execute("commit")
 # update
 cursor.execute("UPDATE employees SET pay =:pay WHERE name=:name AND pay = :pay ", {'name': name, 'pay'=pay})
 
-
-
 # close the connect object when you are done with the database in the end
 connect_object.close()

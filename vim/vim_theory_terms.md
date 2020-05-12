@@ -17,7 +17,7 @@ These notes are based on Venture into vim course provided by tutsplus
 
 There are three mode:
 
-* i    insert mode for incerting
+* i    insert mode for inserting
 
 * v    visual mode for yanking
 
@@ -55,3 +55,6 @@ Notation used in this note ( the same is used in vim official doc file ):
 * \<S-Tab> press the shift and tab key at the same time
 * \<space> space bar
 * Using space as indication of mode change: cw replacement \<Esc>
+
+## Things to remember
+write :set fdm=marker not :set fdm = marker  (no space)

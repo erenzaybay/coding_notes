@@ -45,6 +45,7 @@ F         # same with f, but works backwards
 t         # it also looks for word begin with target letter, but it puts cursor before the word
 T         # same with t, but works backwards
 /function <Enter> # search for word "function",cursor at the next instance down
+
 n                 #  go to next search result
 N                 #  go to last search result
 :nohl             # it means no hight light , it remove the highlighted search result
@@ -90,7 +91,6 @@ u         # undo your last action
 3gg        # go to line 3 
 :3 <Enter> # go to line 3
 
-
 2fw # find the second "w" in current line
 2b  # move 2 word back
 2e  # move 2 word forword cursor at the end of the word
@@ -103,54 +103,50 @@ u         # undo your last action
 2dd # delete 2 lines down
 2cc # change 2 lines down
 
-/\n\n  this search for black line
-Basic commanline:
-:set list         This would list the invisable characters (tavs   newline )  ^I is tab  $ is newline
 
-:set nolist       hid the effect of set list
+ct" #  change until "                  
+ci" #  change inside the "
+ca" change around " This would include both of the ""
 
+# replacement
+:s  # stand for substitute 
+%  # stand for the whole file
+/g # g stands for global
 
-Advanced editing topics:
-Advanced content change:
-
-ct"   change until "                      
-"this is a test"         
-
-ci"  change inside the "
-"this is a test"
-
-ca" change around " This would include both of the "
-"this is a test"
-
-REPLACEMENT:
-s stand for substitute 
-% stand for the whole file
-/g g stands for global
-
-:s/Ember/Amber   replace Ember to Amber in current line
-:%s/Ember/Amber replace Ember to Amber in the whole file , but it only replace the first occurrence of the word Ember
-:%s/Ember/Amber/g replace Ember to Amber in the whole file ,every single one of them
-You do not have to go to the top of the file to make it work
+:s/Ember/Amber    # replace Ember to Amber in current line
+:%s/Ember/Amber   # replace Ember to Amber in the whole file , but it only replace the first occurrence of the word Ember
+:%s/Ember/Amber/g # replace Ember to Amber in the whole file ,every single one of them
 
 
 
-Indentation and folds
+# indentation and folds
 
->>     it is one indentation
+# >> # one indentation
+# << # one indentation back
 
-<<  it is one indentation back
+3>> # indent current line and next 2 lines from the current line
 
-3>> indent current line and next 2 lines from the current line
 
-You can enter visual mode to selected part you wish to indent
+# selection
+# You can you Ctrl-T and Ctrl-D to indent and indxent back,but it is not supported in cmder
+# In visual mode, you can jump to the other end of the visual selection by pressing o
+:v # enter visual mode to selected part you wish to indent, edit, or delete.
+:vl # visual line mode
+gv  # reselect the part you selected in visual mode
 
-In visual mode, you can jump to the other side of the visual selection by pressing o
 
-You can you Ctrl-T and Ctrl-D to indent and indent back,but it is not supported in cmder
-
-gv reselect the part you selected in visual mode
-
+# command:
 
 # writing files
 :w!   # use ! to overide :w! when needed
-:help :s   # This shows the help file for the command :s ,using help file can be usefull:  
+:wq   # write and quit
+:q    # quit withou writing
+:q!   # quit discard any changes
+:help :s   # This shows the help file for the command :s ,using help file can be usefull.
+
+
+#show invisable characters
+:set list         This would list the invisable characters (tavs   newline )  ^I is tab  $ is newline
+:set nolist       hid the effect of set list
+
+
