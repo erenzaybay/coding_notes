@@ -36,30 +36,27 @@ started 2019.01.01
 ## Stage Three
 * Machine Learning? Statistics? Android? Rasberry Pie?
 
+## Yet to learn Concepts collected
 
+### Development Basic Tools
 
-### Yet to learn Concepts collected:
+* Vim: a text editor with so called steep learning curve
+* zen coding: a package in text editor allows fast html css formatting
+* LaTax: book editing tool
+* Jekyll: a static website generating tool
+* Docker:???
 
-Vim: a text editor with so called steep learning curve
-zen coding: a package in text editor allows fast html css formating
-LaTax: a book editing tool???
+### Website
 
-Jekyll: a static website generating tool
+#### Front-end Frameworks
 
-Docker:???
+* backbone
+* react
+* ember
+* Angular.js is one of the most widely used single-page application development frameworks in the industry. It makes it easier than ever to create efficient and production-ready single-page applications.
 
-Wordpress:a website  framework?? content manager???
+## known and learnt
 
-front-end frameworks: Backbone, Angular, React and Ember.
+## question
 
-Angular.js is one of the most widely used single-page application development frameworks in the industry. It makes it easier than ever to create efficient and production-ready single-page applications.
-
-known and learnt:
-
-
-
-question:
-
-??? git had a detailed log file records all the input actions
-
- 
+* git had a detailed log file records all the input actions ???
