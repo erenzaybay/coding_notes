@@ -1,98 +1,24 @@
-
-# Knowledge:
-
-Vim is a fancy text editor with superpower.
-
-These notes are based on Venture into vim course provided by tutsplus
-
-## .vimrc introduction
-
-* .vimrc is a vim configuration file that saves your vim preference.
-
-* .vimrc file in windows is located in the user directory C:\Users\erenzaybay\.vimrc
-
-* .vimrc file in linux is located in the user folder ~\.vimrc
-
-## 4 Modes
-
-There are three mode:
-
-* i    insert mode for inserting
-
-* v    visual mode for yanking
-
-* vl   visual line mode yanking
-
-* Esc  normal mode, aka command mode for giving command
-
-## Terms
-
-* Repeater: numbers can be used as repeater.
-
-* Buffer:Buffer is a place in memory, which is showed as a list of files , you need to save the file to goto the next buffer.
-
-* Tabs and Windows: When opening tabs and windows, the tabs are one level higher in structural logic.Basically windows are nested in tabs.
-
-* .swp files: the temporarily save files that exists only when there is an abnormal exit, you can retrieve unsaved file from the file, and you need to manually remove the file when they are not useful any more.
-
-## Notation
-
-Notation used in this note ( the same is used in vim official doc file ):
-
-* dap: in sequence , press d , then a then p
-
-* <C-n>: hold down Ctrl and then n at the same time
-
-* G<C-n>: press and release G, then press Ctrl and n at the same time
-
-* placeholders: {motion} {a-zA-z} {char} {int} {repeater} {register_name}
-
-* \<Esc>  Escape key
-* \<CR>  Carriage return key or enter key
-* \<Ctrl>   Ctrl key
-* \<Tab> tab key
-* \<Shift> shift key
-* \<S-Tab> press the shift and tab key at the same time
-* \<space> space bar
-* Using space as indication of mode change: cw replacement \<Esc>
-
-## Things to remember
-write :set fdm=marker not :set fdm = marker  (no space)
-
-
-
-
-
-
-
-
-
-
+# Things to remember
+# .vimrc
+# the tabs are one level higher iin structural logic.Basically windows are nested in tabs.
+# * .swp files: manually remove 
+# :set fdm=marker not :set fdm = marker  (no space)
 # Basic editing
-
-# navigatin basic movement: 
-j	# move cursor up a character  
-k	# move cursor down a character
-h	# move cursor left a character
-l	# move cursor right a character
-
-w   # move forward one word, cursor at the first letter, seprating words by logic
-W   # move forward one word, cursor at the first letter, seprating words by space
-e   # move forward one word, cursor at the last letter, seprating words by logic
-E   # move forword one word, cursor at the last letter, seprating words by space
-b   # move afterward one word, cursor at the first letter,seprating words by logic
-B   # move forward on real word,cursor at the first letter,seprating words by space
-
-$   # move to the end of the line
-0   # move to the beginning of the line, the real beginning
-^   # move to the beginning of the line, the first none-space letter
-
-gg  # move to the beginning of the file
-G   # move to the end of the file,it is <shift-g>
+j k h l
+w   # logic
+W   # space
+e   # cursor last letter, logic
+E   # cursor last letter, space
+b   # logic
+B   # space
+$   # end 
+0   # real beginning
+^   # first none-space letter
+gg  # beginning of the file
+G   # end of the file
 {   # move to the last paragraph
 }   # move to the next paragraph
-
-
+jj
 # navigating reletive position 
 Ctrl +d  # it means down, It jumps half a screen down
 Ctrl +u  # it means up, It jumps half a screen up
@@ -103,64 +29,52 @@ H # move cursor to the head of the current screen
 L # move cursor to the last line of the current screen
 3L  #   3 lines above the bottom
 3H  #   3 lines below the head
-
 # navigating window position
 zt # this command will modify the current window so that the current cursor position will stay on top of the screen
 zb # this command will modify the current window so that the current cursor position will stay on the bottom of the screen
 zz # this command will modify the current window so that the current cursor position will stay in the middle of the screen
-
 # searching
 f         # it means find word begin with target letter fa find the first word begin with a within the current line, it only searches forward
 F         # same with f, but works backwards
 t         # it also looks for word begin with target letter, but it puts cursor before the word
 T         # same with t, but works backwards
-/function <Enter> # search for word "function",cursor at the next instance down
-
-n                 #  go to next search result
-N                 #  go to last search result
-:nohl             # it means no hight light , it remove the highlighted search result
-?function <Enter> #  search for word "function",cursor at the next instance up
-
+/function <Enter> 
+?function <Enter> 
+n
+N
+:nohl
 # editing
 x         # delete the letter at the current cursor
-
 o         # start a new line below and into the insert mode
 O         # start a new line above and into the insert mode
 p         # paste
 P         # paste before the cursor , which is extremly useful,it is <shift+p>
-
-dw        # delete the word at the cursor when you delete stuff , they are also copied
+dw
 db        # delete the word before the cursor
 d0 # delete everything before the cursor of current line.
 d^ # delete everything before the cursor till first non space character of current line.
-
-cw # change the current word, delete the word at the current cursor and into the insert mode
-cb # change the last word, delete the word before the cursor and into the insert mode
-c0 # change everything before the cursor of current line.
-c^ # change everything before the cursor till first non space character of current line.
-
+d$
+cw 
+cb 
+c0 
+c^
 yw # yank word, y stands for yank, means copy
-yb # yank the word before the current cursor
-y0 # yank everything before the cursor of current line
-y^ # yank everythin befor the cursor till first non space character of current line
-
-d/target <Enter> # delete until the word "target"
-c/target <Enter> # change until the word "target"
-y/target <Enter> # yank until the word "target"
-
-dd        # delete the current line
-cc        # change the current line
-yy        # copy the current line
-
-.         # repeat the last action
-u         # undo your last action
+yb 
+y0
+y^
+d/target <Enter>
+c/target <Enter>
+y/target <Enter>
+dd
+cc
+yy
+.
+u
 <ctrl-u>  # cancel the last undo
-
 #navigation with repeater
-3G         # go to line 3
-3gg        # go to line 3 
-:3 <Enter> # go to line 3
-
+3G
+3gg
+:3 <Enter>
 2fw # find the second "w" in current line
 2b  # move 2 word back
 2e  # move 2 word forword cursor at the end of the word
@@ -172,12 +86,9 @@ u         # undo your last action
 2db # delete 2 words back
 2dd # delete 2 lines down
 2cc # change 2 lines down
-
-
 ct" #  change until "                  
 ci" #  change inside the "
 ca" change around " This would include both of the ""
-
 # replacement
 :s  # stand for substitute 
 %  # stand for the whole file
